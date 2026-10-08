@@ -1,0 +1,24 @@
+Misi 1 
+1. apa yang dimaksud dengan merge conflict dalam git
+jawab :Merge Conflict adalah kondisi ketika Git tidak dapat menggabungkan (merge) perubahan kode secara otomatis karena ada dua atau lebih branch mengubah baris kode yang sama pada file yang sama dengan isi yang berbeda.
+
+Miai 3
+-Tuliskan pesan error/peringatan yang muncul di terminal saat terjadi conflict!
+jawab : 
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+Misi 4
+<<<<<<< HEAD : Menandakan awal dari kode yang berasal dari branch saat ini yang sedang aktif (di branch main/master).  
+======= : Pembatas atau garis pemisah antara kode versi branch utama (HEAD) dengan kode versi branch luar yang ingin digabungkan (fitur-header-b).  
+>>>>>>> fitur-header-b : Menandakan akhir dari baris kode yang menyebabkan konflik yang berasal dari branch fitur-header-b.  
+
+STUDI KASUS 
+Kasus 1: Saat terjadi conflict, Budi panik. Ia ingin membatalkan proses merge yang sedang bermasalah agar kembali ke posisi aman sebelum merge. Perintah Git apa yang harus ia gunakan?
+jawab :git merge--abort  untuk membatalkan proses merge yang sedang mengalami konflik dan mengembalikan kondisi repository lokal ke posisi aman (sebelum proses merge dimulai).
+
+
+
+Kasus2: Apakah merge conflict selalu berarti ada anggota tim yang melakukan kesalahan (error)? Jelaskan alasannya berdasarkan simulasi yang baru saja kalian lakukan!
+jawab:Tidak. Merge conflict bukan berarti ada kesalahan atau error dari anggota tim, melainkan hal yang wajar dalam kolaborasi. Konflik terjadi karena Git mendeteksi dua orang atau lebih mengubah file pada baris kode yang sama secara bersamaan, sehingga sistem membutuhkan keputusan manusia (diskusi tim) untuk memilih kode mana yang akan digunakan.
